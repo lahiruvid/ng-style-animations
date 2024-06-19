@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-style-animations": {
+    "angular-animations": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-style-animations",
+            "outputPath": "dist/angular-animations",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ng-style-animations:build:production"
+              "buildTarget": "angular-animations:build:production"
             },
             "development": {
-              "buildTarget": "ng-style-animations:build:development"
+              "buildTarget": "angular-animations:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ng-style-animations:build"
+            "buildTarget": "angular-animations:build"
           }
         },
         "test": {
@@ -93,6 +94,6 @@
     }
   },
   "cli": {
-    "analytics": "04d09ac1-7707-4a7b-99a8-437d6c1ba3c0"
+    "analytics": "6a256160-8461-49c3-8b8d-b5856f6ccac4"
   }
 }
